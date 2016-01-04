@@ -1,0 +1,88 @@
+ElementaryQuestion
+		EQ1: Who is the main character of Harry Potter?
+		Ron
+		Snape
+		Hermione
+		Harry Potter
+		Hint: He has the scar
+		Harry Potter
+ElementaryQuestion
+		EQ2: Who is Luke Skywalker's father?
+		Darth Sidious
+		Qui-Gon-Ginn
+		Darth Vader/Anakin Skywalker
+		Jar-Jar
+		Hint: He says the line "I am your father"
+		Darth Vader/Anakin Skywalker
+ElementaryQuestion
+		EQ3: What Marvel movie features Tony Stark?
+		Iron Man
+		Fantastic Four
+		The Incredible Hulk
+		Superman
+		Hint: He's the man of iron
+		Iron Man
+ElementaryQuestion
+		EQ4: What is Thomas's preferred major?
+		Computer Science
+		Mathematics
+		First Year College
+		Liberal Arts
+		Hint: I love computers and math
+		Computer Science
+StandardQuestion
+		SQ1: What is the main villian in Lord of the Rings?
+		Bilbo
+		Sauron
+		Dumbledore
+		Voldemort
+		Sauron
+StandardQuestion
+		SQ2: In Inception, what wakes the characters up from their dreams?
+		Water
+		A Kick
+		A Slap
+		A Kiss
+		A Kick
+StandardQuestion
+		SQ3: In Harry Potter how did Hermione travel through time?
+		A Spell
+		A Scroll
+		A Potion
+		A Time-Turner
+		A Time-Turner
+StandardQuestion
+		SQ4: In The Avengers: Age of Ulton who was the main villain?
+		Tony Stark
+		Vision
+		Ultron
+		Bruce Banner
+		Ultron
+AdvancedQuestion
+		AQ1: How many horocruxes must Harry Destroy to kill Voldemort?
+		6
+		7
+		3
+		1
+		7
+AdvancedQuestion
+		AQ2: What major death happened in the 6th book of Harry Potter?
+		Dobby
+		Tonks
+		Dumbledore
+		Harry
+		Dumbledore
+AdvancedQuestion
+		AQ3: In Lord of the Rings, what was Gollum originally?
+		A Human
+		A Hobbit
+		A Wizard
+		An Ogre
+		A Hobbit
+AdvancedQuestion
+		AQ4: In The Avengers: Age of Ultron, who tw characters were voiced by the same person?
+		Vision and Jarvis
+		Vision and Ultron
+		Ultron and Tony Stark
+		Vision and Tony Stark
+		Vision and Jarvis

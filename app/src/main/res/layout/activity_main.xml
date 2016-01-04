@@ -1,0 +1,165 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#5de0ef"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Correct Questions"
+        android:id="@+id/textView2"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:typeface="normal"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Questions"
+        android:id="@+id/textView3"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:typeface="normal"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/correctQuestions"
+        android:textAlignment="center"
+        android:numeric="integer"
+        android:textSize="20dp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_marginStart="74dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/totalQuestions"
+        android:textAlignment="center"
+        android:numeric="integer"
+        android:textSize="20dp"
+        android:layout_below="@+id/textView3"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_marginStart="66dp"/>
+
+    <TextView android:id="@+id/text1"
+              android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+              android:text="@string/QuestionText"
+        android:textStyle="bold"
+        android:textIsSelectable="false"
+              android:layout_alignParentStart="false"
+              android:layout_alignParentBottom="false"
+              android:layout_centerHorizontal="true"
+              android:layout_below="@+id/correctQuestions"
+              android:maxHeight="250dp"
+              android:gravity="center_horizontal"
+              android:maxLines="3"
+              android:padding="15dp"
+              android:layout_marginTop="25dp"
+              android:layout_marginBottom="10dp"/>
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text1"
+        android:orientation="vertical"
+                android:id="@+id/radioGroup"
+                android:layout_alignParentTop="false"
+                android:layout_alignWithParentIfMissing="false">
+
+        <RadioButton android:id="@+id/answer1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Answer1"
+            android:onClick="onRadioButtonClicked"
+                     android:singleLine="false"/>
+
+        <RadioButton android:id="@+id/answer2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Answer2"
+            android:onClick="onRadioButtonClicked"
+                     android:singleLine="false"/>
+
+        <RadioButton android:id="@+id/answer3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Answer3"
+            android:onClick="onRadioButtonClicked"
+                     android:singleLine="false"/>
+
+        <RadioButton android:id="@+id/answer4"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:text="@string/Answer4"
+                     android:onClick="onRadioButtonClicked"
+                     android:singleLine="false"/>
+
+    </RadioGroup>
+
+    <TextView android:id="@+id/text2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+              android:gravity="center"
+        android:text="Incorrect or Correct\nCorrect Answer"
+        android:textStyle="bold"
+        android:textIsSelectable="false"
+              android:layout_alignParentStart="false"
+              android:textAlignment="center"
+              android:layout_alignParentEnd="true"
+              android:layout_below="@+id/radioGroup"
+              android:layout_marginTop="20dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom|center_horizontal"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/text2">
+
+        <Button android:id="@+id/Button1"
+                android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+                android:text="@string/submitQuesiton"
+            android:onClick = "onSubmitQuestionClicked"
+                android:layout_above="@+id/Button2"
+                android:layout_alignParentStart="true"
+            />
+
+        <Button android:id="@+id/Button2"
+                android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+                android:text="@string/nextQuestion"
+            android:onClick = "onNextQuestionClicked"
+                android:layout_above="@+id/Button3"
+                android:layout_alignParentStart="true"
+            />
+
+        <Button android:id="@+id/Button3"
+                android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+                android:text="@string/Quit"
+            android:onClick = "onQuitClicked"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

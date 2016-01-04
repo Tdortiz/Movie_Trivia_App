@@ -1,0 +1,72 @@
+ElementaryQuestion
+		EQ1: Who is the main character of Harry Potter?
+		Ron
+		Snape
+		Hermione
+		Harry Potter
+		Hint: He has the scar
+		d
+ElementaryQuestion
+		EQ2: Who is Luke Skywalker's father?
+		Darth Sidious
+		Qui-Gon-Ginn
+		Darth Vader/Anakin Skywalker
+		Jar-Jar
+		Hint: He says the line "I am your father"
+		c
+ElementaryQuestion
+		EQ3: What is Thomas's preferred major?
+		Computer Science
+		Mathematics
+		First Year College
+		Liberal Arts
+		Hint: I love computers and math
+		a
+StandardQuestion
+		SQ1: What is the main villian in Lord of the Rings?
+		Bilbo
+		Sauron
+		Dumbledore
+		Voldemort
+
+		b
+StandardQuestion
+		SQ2: In Inception, what wakes the characters up from their dreams?
+		Water
+		A Kick
+		A Slap
+		A Kiss
+
+		b
+StandardQuestion
+		SQ3: In Harry Potter how did Hermione travel through time?
+		A Spell
+		A Scroll
+		A Potion
+		A Time-Turner
+
+		d
+AdvancedQuestion
+		AQ1: How many horocruxes must Harry Destroy to kill Voldemort?
+		6
+		7
+		3
+		1
+
+		b
+AdvancedQuestion
+		AQ2: What major death happened in the 6th book of Harry Potter?
+		Dobby
+		Tonks
+		Dumbledore
+		Harry
+
+		c
+AdvancedQuestion
+		AQ3: In Lord of the Rings, what was Gollum originally?
+		A Human
+		A Hobbit
+		A Wizard
+		An Ogre
+
+		b

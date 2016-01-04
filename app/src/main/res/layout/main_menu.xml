@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#5de0ef"
+                android:backgroundTint="#5de0ef"
+    >
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quit"
+        android:onClick="onMainMenuQuitClicked"
+        android:id="@+id/main_menu_quit"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:minWidth="175dp"
+        android:layout_marginTop="0dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rules"
+        android:id="@+id/rules"
+        android:onClick="onRulesClicked"
+        android:layout_gravity="center"
+        android:minWidth="175dp"
+        android:layout_above="@+id/button"
+        android:layout_alignStart="@+id/quiz"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quiz Yourself"
+        android:id="@+id/quiz"
+        android:onClick="onQuizClicked"
+        android:layout_gravity="center_horizontal|top"
+        android:minWidth="175dp"
+        android:layout_above="@+id/rules"
+        android:layout_alignStart="@+id/button"/>
+
+    <ImageView
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:id="@+id/imageView"
+        android:src="@mipmap/ic_launcher"
+        android:layout_gravity="center_horizontal|top"
+        android:backgroundTint="#5de0ef"
+        android:background="#5de0ef"
+        android:backgroundTintMode="src_over"
+        android:foreground="#5de0ef"
+        android:layout_above="@+id/quiz"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="83dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add New Questions"
+        android:onClick="onAddQuestionClicked"
+        android:id="@+id/button"
+        android:layout_above="@+id/main_menu_quit"
+        android:layout_centerHorizontal="true"
+        android:minWidth="175dp"/>
+
+</RelativeLayout>
