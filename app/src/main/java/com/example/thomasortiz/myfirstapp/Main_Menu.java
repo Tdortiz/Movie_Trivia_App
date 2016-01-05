@@ -68,7 +68,7 @@ public class Main_Menu extends AppCompatActivity {
 
 	public void onMainMenuQuitClicked(View view) {
 		finish();
-		System.exit(1);
+		System.exit(0);
 	}
 
 	public void onAddQuestionClicked(View view){

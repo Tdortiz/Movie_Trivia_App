@@ -30,6 +30,14 @@ ElementaryQuestion
 		Liberal Arts
 		Hint: I love computers and math
 		Computer Science
+ElementaryQuestion
+		EQ5: Which of these movies did not debut in 1997:
+		Liar Liar
+		Men in Black
+		Toy Story 2
+		Titanic
+		Toy Story 2 (1999)
+		Hint: Its not Men in Black or Liar Liar
 StandardQuestion
 		SQ1: What is the main villian in Lord of the Rings?
 		Bilbo
@@ -80,7 +88,7 @@ AdvancedQuestion
 		An Ogre
 		A Hobbit
 AdvancedQuestion
-		AQ4: In The Avengers: Age of Ultron, who tw characters were voiced by the same person?
+		AQ4: In The Avengers: Age of Ultron, which two characters were voiced by the same person?
 		Vision and Jarvis
 		Vision and Ultron
 		Ultron and Tony Stark

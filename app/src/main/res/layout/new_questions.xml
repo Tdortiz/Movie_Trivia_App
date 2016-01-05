@@ -11,97 +11,71 @@
         android:text="@string/Question_Req"
         android:id="@+id/desc"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Easy"
-        android:id="@+id/ele"
-        android:onClick="onEleClicked"
-        android:layout_below="@+id/desc"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="49dp"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Standard"
-        android:onClick="onStandardClicked"
-        android:id="@+id/stand"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Advanced"
-        android:onClick="onAdvancedClicked"
-        android:id="@+id/adv"
-        android:layout_below="@+id/stand"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="43dp"/>
+        android:textSize="20dp"
+        android:paddingBottom="10dp"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/QuestionText"
-            android:text="@string/question_txt"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="147dp"/>
+            android:minWidth="250dp"
+            android:layout_above="@+id/ansB"
+            android:layout_alignParentEnd="true"/>
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/ansA"
-            android:text="@string/ansA"
-            android:layout_below="@+id/QuestionText"
-            android:layout_alignParentStart="true"/>
+            android:minWidth="250dp"
+            android:layout_above="@+id/QuestionText"
+            android:layout_toEndOf="@+id/QuestionTextView"/>
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/ansB"
-            android:text="@string/ansB"
             android:layout_centerVertical="true"
-            android:layout_alignParentStart="true"/>
+            android:layout_alignStart="@+id/QuestionText"
+            android:layout_alignEnd="@+id/ansA"/>
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/ansC"
-            android:text="@string/ansC"
             android:layout_below="@+id/ansB"
-            android:layout_alignParentStart="true"/>
+            android:layout_alignStart="@+id/ansB"
+            android:layout_alignEnd="@+id/ansB"/>
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/ansD"
-            android:text="@string/ansD"
             android:layout_below="@+id/ansC"
-            android:layout_alignEnd="@+id/ansC"/>
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/QuestionTextView"/>
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/ans"
             android:layout_below="@+id/ansD"
-            android:layout_alignParentStart="true"
-            android:text="@string/ans"/>
+            android:layout_alignStart="@+id/ansD"
+            android:layout_alignEnd="@+id/ansD"/>
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/hint"
             android:layout_below="@+id/ans"
-            android:layout_alignParentStart="true"
-            android:text="@string/hint"/>
+            android:layout_alignStart="@+id/ans"
+            android:layout_alignEnd="@+id/ans"/>
 
         <Button
             android:layout_width="wrap_content"
@@ -123,5 +97,102 @@
             android:layout_marginEnd="45dp"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Easy"
+            android:id="@+id/ele"
+            android:onClick="onEleClicked"
+            android:layout_above="@+id/ansA"
+            android:layout_alignParentStart="true"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Standard"
+            android:onClick="onStandardClicked"
+            android:id="@+id/stand"
+            android:layout_alignTop="@+id/ele"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Advanced"
+            android:onClick="onAdvancedClicked"
+            android:id="@+id/adv"
+            android:layout_alignTop="@+id/stand"
+            android:layout_alignEnd="@+id/QuestionText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/question_txt"
+            android:id="@+id/QuestionTextView"
+            android:textSize="20dp"
+            android:layout_alignBottom="@+id/ansA"
+            android:layout_toStartOf="@+id/stand"
+            android:minWidth="350dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ansA"
+            android:id="@+id/textView9"
+            android:textSize="20dp"
+            android:layout_above="@+id/ansB"
+            android:layout_alignEnd="@+id/ele"
+            android:minWidth="125dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ansB"
+            android:id="@+id/textView10"
+            android:textSize="20dp"
+            android:layout_above="@+id/ansC"
+            android:layout_alignEnd="@+id/textView9"
+            android:minWidth="125dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ansC"
+            android:id="@+id/textView11"
+            android:textSize="20dp"
+            android:layout_above="@+id/ansD"
+            android:layout_alignStart="@+id/textView10"
+            android:minWidth="125dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ansD"
+            android:id="@+id/textView12"
+            android:textSize="20dp"
+            android:layout_above="@+id/ans"
+            android:layout_alignStart="@+id/textView11"
+            android:minWidth="125dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ans"
+            android:id="@+id/textView13"
+            android:textSize="20dp"
+            android:layout_above="@+id/hint"
+            android:layout_alignParentStart="true"
+            android:minWidth="125dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hint"
+            android:id="@+id/textView14"
+            android:textSize="20dp"
+            android:layout_alignBottom="@+id/hint"
+            android:layout_alignParentStart="true"
+            android:minWidth="120dp"/>
     </RelativeLayout>
 </RelativeLayout>

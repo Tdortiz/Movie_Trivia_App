@@ -1,10 +1,9 @@
 package com.example.thomasortiz.myfirstapp;
 
-import android.content.Context;
+
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
-
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,12 +13,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
 
 public class New_Question extends AppCompatActivity {
+	DatabaseHelper myDb;
 	private TextView description;
 	private Button ele, sta, adv, submit_Question;
 	private EditText questionText, ansA, ansB, ansC, ansD, ans, hint;
@@ -29,6 +25,7 @@ public class New_Question extends AppCompatActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.new_questions);
+		myDb = new DatabaseHelper(this);
 
 		description = (TextView)findViewById(R.id.desc);
 		ele = (Button) findViewById((R.id.ele));
@@ -145,7 +142,7 @@ public class New_Question extends AppCompatActivity {
 	}
 
 	public void onSubmitQuestionClicked(View view){
-
+		boolean isInserted = false;
 		if( checkQuestion() ) {
 			Toast.makeText(this, "Question Added!", Toast.LENGTH_SHORT).show();
 
@@ -166,22 +163,47 @@ public class New_Question extends AppCompatActivity {
 			adv.setVisibility(View.VISIBLE);
 
 			if (type.equals("ele")) {
-				// do stuff
+				// do stuff with all the editText fields
+				isInserted = myDb.insertData(questionText.getText().toString(),
+											ansA.getText().toString(),
+											ansB.getText().toString(),
+											ansC.getText().toString(),
+											ansD.getText().toString(),
+											ans.getText().toString(),
+											hint.getText().toString() );
 			} else if (type.equals("adv")) {
-				// do stuff
+				isInserted = myDb.insertData(questionText.getText().toString(),
+											ansA.getText().toString(),
+											ansB.getText().toString(),
+											ansC.getText().toString(),
+											ansD.getText().toString(),
+											ans.getText().toString(),
+											hint.getText().toString() );
 			} else {
-				// do stuff
+				isInserted = myDb.insertData(questionText.getText().toString(),
+											ansA.getText().toString(),
+											ansB.getText().toString(),
+											ansC.getText().toString(),
+											ansD.getText().toString(),
+											ans.getText().toString(),
+											hint.getText().toString() );
 			}
 
-			questionText.setText(R.string.question_txt);
-			ansA.setText(R.string.ansA);
-			ansB.setText(R.string.ansB);
-			ansC.setText(R.string.ansC);
-			ansD.setText(R.string.ansD);
-			ans.setText(R.string.ans);
-			hint.setText(R.string.hint);
+			if(isInserted){
+				Toast.makeText(New_Question.this, "Data Inserted", Toast.LENGTH_SHORT).show();
+			} else {
+				Toast.makeText(New_Question.this, "Data Not Inserted", Toast.LENGTH_SHORT).show();
+			}
 
-		} else {
+			questionText.setText("");
+			ansA.setText("");
+			ansB.setText("");
+			ansC.setText("");
+			ansD.setText("");
+			ans.setText("");
+			hint.setText("");
+
+		} else {  // Question is not valid
 			Toast.makeText(this, "Invalid Question, try your input again", Toast.LENGTH_SHORT).show();
 
 			questionText.setEnabled(false);
@@ -204,19 +226,19 @@ public class New_Question extends AppCompatActivity {
 	}
 
 	public boolean checkQuestion(){
-		if( !questionText.getText().toString().equals("Question Text") )
+		if( !questionText.getText().toString().isEmpty() )
 			return true;
-		else if( !ansA.getText().toString().equals("Answer A") )
+		else if( !ansA.getText().toString().isEmpty() )
 			return true;
-		else if( !ansB.getText().toString().equals("Answer B") )
+		else if( !ansB.getText().toString().isEmpty() )
 			return true;
-		else if( !ansC.getText().toString().equals("Answer C") )
+		else if( !ansC.getText().toString().isEmpty() )
 			return true;
-		else if( !ansD.getText().toString().equals("Answer D") )
+		else if( !ansD.getText().toString().isEmpty() )
 			return true;
-		else if( !ans.getText().toString().equals("Answer") )
+		else if( !ans.getText().toString().isEmpty() )
 			return true;
-		else if( hint.getText().toString().equals("Hint") )
+		else if( hint.getText().toString().isEmpty() )
 			return false;
 		return false;
 	}

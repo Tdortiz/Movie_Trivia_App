@@ -36,11 +36,13 @@ public class MainActivity extends AppCompatActivity {
 	private TextView textView1, textView2, correctQuestions, totalQuestions;
 	private MovieQuiz mq;
 	private GoogleApiClient client;
+	//DatabaseHelper myDb;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		//myDb = new DatabaseHelper(this);
 
 		submitButton = (Button) findViewById(R.id.Button1);
 		nextButton = (Button) findViewById(R.id.Button2);
