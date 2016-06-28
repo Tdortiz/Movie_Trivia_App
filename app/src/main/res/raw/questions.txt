@@ -36,8 +36,8 @@ ElementaryQuestion
 		Men in Black
 		Toy Story 2
 		Titanic
-		Toy Story 2 (1999)
 		Hint: Its not Men in Black or Liar Liar
+		Toy Story 2
 StandardQuestion
 		SQ1: What is the main villian in Lord of the Rings?
 		Bilbo
